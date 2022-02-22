@@ -1,0 +1,247 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem; /*56px*/
+
+/*========== Colors ==========*/
+ /*Color mode HSL(hue, saturation, lightness)*/
+ --light-red: hsl(356, 100%, 66%);
+ --very-light-red: hsl(355, 100%, 74%);
+ --very-dark-blue: hsl(240, 10%, 16%);
+ --dark-blue: hsl(207, 13%, 34%);
+ --light-blue: hsl(240, 2%, 79%);
+ --white: hsl(0, 0%, 100%);
+/* Gradient */
+ 
+--gradient-very-light-red: hsl(13, 100%, 72%);
+--gradient-light-red: hsl(353, 100%, 62%);
+ 
+--gradient-dark-gray-blue: hsl(237, 17%, 21%);
+--gradient-desaturated-blue: hsl(237, 23%, 32%);
+
+
+
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font-overpass: 'Overpass', sans-serif;
+  --body-font-ubuntu: 'Ubuntu', sans-serif;
+  
+  --p-font-size: 1.25rem;
+  --h1-font-size: 4rem;
+  --h2-font-size: ;
+  --h3-font-size:  ;
+  --normal-font-size: 1rem; 
+  --small-font-size: ;
+  --smaller-font-size: ;  
+
+  /*========== Font weight ==========*/
+  --overpass-medium: 300;
+  --overpass-semi-bold: 600;
+
+  --ubuntu-medium: 400;
+  --ubuntu-semi-bold: 500;
+  --ubuntu-bold: 700;
+  /*========== margin Bottom ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/* Responsive typography */
+
+
+/*=============== BASE ===============*/
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: var(--white);
+}
+
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+h1{
+  color: var(--white);
+  font-weight: var(--overpass-semi-bold);
+  font-family: var(--body-font-overpass);
+  font-size: var(--h1-font-size);
+  letter-spacing: -3px;
+}
+
+h2, h3{
+    color: var(--very-dark-blue);
+    font-weight: var(--overpass-medium);
+    font-family: var(--body-font-overpass);
+}
+
+p{
+  color: var(--white);
+  font-family: var(--body-font-overpass);
+  font-weight: var(--overpass-medium);
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  font-family: var(--body-font-overpass);
+}
+
+img{
+ min-width: 100%; 
+ height: auto;
+}
+
+/* =============== Main section =============== */
+
+.bg{
+    background: url(/assets/img/bg-pattern-intro-desktop.png) center / cover no-repeat;
+    /*background-size: 200%;*/
+    background-position: relative;
+    background-position-x: -400px !important;
+    background-size: 200%;
+    overflow: hidden;
+    background-position: -350px;
+    padding-bottom: 600px;
+    z-index: 2;
+}
+
+.bg-header{
+  background: linear-gradient(130deg, var(--gradient-very-light-red), var(--gradient-light-red));
+  z-index: 1;
+/*  border-bottom-left-radius: 100px;*/
+  
+}
+
+/*.bg-header .btn:hover, .bg-header .btn-secondary:hover{
+  background: linear-gradient(130deg, var(--gradient-very-light-red), var(--gradient-light-red));
+  z-index: 1;
+  border-bottom-left-radius: 100px;
+  transition: 0.5s;
+}*/
+
+.header-bottom{
+  position: absolute; 
+  left: 25%;
+  top: 25%;
+  text-align: center;
+}
+
+.btn{
+  margin-top: 47px;
+  margin-right: 15px;
+  padding-bottom: 5px;
+  border: 1px solid var(--white);
+  border-radius: 50px;
+  align-items: center;
+  height: 48px;
+  width: 137px;
+  font-family: var(--body-font-ubuntu);
+  font-weight: var(--ubuntu-bold);
+  font-size: 16px;
+  color: var(--light-red);
+}
+
+.btn-secondary{
+  background-color: transparent;
+  color: var(--white);
+}
+
+.btn:hover{
+  background-color: var(--very-light-red);
+  color: var(--white);
+  border: 1px solid var(--very-light-red);
+  transition: 0.5s;
+}
+
+.btn-secondary:hover{
+  background-color: var(--white);
+  border: 1px solid var(--white);
+  color: var(--very-light-red);
+  transition: 0.5s;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.navbar{
+  display: flex;
+}
+
+.nav-btn{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 161px;
+}
+
+.nav-bar-content{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 75px;
+}
+
+.nav-btn-1{
+  font-family: var(--body-font-ubuntu);
+  font-weight: var(--ubuntu-bold);
+  border: 1px solid transparent;
+  background-color: transparent;
+  margin-right: 32px;
+  font-size: 16px;
+  color: var(--white);
+}
+
+.nav-btn-2{
+  padding-bottom: 5px;
+  border: 1px solid var(--white);
+  border-radius: 50px;
+  align-items: center;
+  height: 48px;
+  width: 137px;
+  font-family: var(--body-font-ubuntu);
+  font-weight: var(--ubuntu-bold);
+  font-size: 16px;
+  color: var(--light-red);
+}
+
+.nav-btn-2:hover{
+  background-color: var(--very-light-red);
+  color: var(--white);
+  border: 1px solid var(--very-light-red);
+  transition: 0.5s;
+}
+
+.btn-product, .btn-company, .btn-connect{
+  font-family: var(--body-font-ubuntu);
+  font-weight: var(--ubuntu-bold);
+  font-size: 16px;
+  color: var(--white);
+}
+
