@@ -113,11 +113,10 @@ a{
 }
 
 img{
- min-width: 100%; 
  height: auto;
 }
 
-/* =============== Main section =============== */
+/* =============== nav =============== */
 
 .bg{
     background: url(/assets/img/bg-pattern-intro-desktop.png) center / cover no-repeat;
@@ -157,6 +156,7 @@ img{
   margin-right: 15px;
   padding-bottom: 5px;
   border: 1px solid var(--white);
+  background-color: var(--white);
   border-radius: 50px;
   align-items: center;
   height: 48px;
@@ -221,6 +221,7 @@ img{
 .nav-btn-2{
   padding-bottom: 5px;
   border: 1px solid var(--white);
+  background-color: var(--white);
   border-radius: 50px;
   align-items: center;
   height: 48px;
@@ -245,3 +246,50 @@ img{
   color: var(--white);
 }
 
+/* =============== Main section =============== */
+
+.first-container-sct-2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.first-section p{
+  color: var(--dark-blue);
+  font-family: var(--body-font-overpass);
+  font-weight: var(--overpass-medium);
+  font-size: 16px;
+  margin-bottom: 28px;
+  letter-spacing: 31,25px;
+  line-height: 28px;
+
+}
+
+.first-section h1{
+  color: var(--dark-blue);
+  font-size: 40px;
+  font-family: var(--body-font-overpass);
+  font-weight: var(--overpass-medium);
+  margin-top: 150px;
+  text-align: center;
+  
+}
+
+.first-section h2{
+  color: var(--dark-blue);
+  font-family: var(--body-font-overpass);
+  margin-bottom: 28px;
+}
+
+.container-sct-2{
+  margin-left: 165px;
+  margin-top: 5rem;
+}
+
+.sct-2-img{
+  background: url(/assets/img/illustration-editor-desktop.svg) center / cover no-repeat;
+  height: 800px;
+  width: 800px;
+  background-position-x: 200px;
+}
